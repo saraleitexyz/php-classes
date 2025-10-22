@@ -1,9 +1,6 @@
 <!--
-5. Codificar un programa que solicite la carga de un valor positivo y nos
-muestre desde 1 hasta el valor ingresado de uno en uno.
-Ejemplo: Si ingresamos 30 se debe mostrar en pantalla los números del 1 al
-30.
-
+6 - Desarrollar un programa que permita la carga de 10 valores por teclado y
+nos muestre posteriormente la suma de los valores ingresados y su promedio.
 -->
 <!DOCTYPE html>
 <html lang="en">
@@ -13,11 +10,13 @@ Ejemplo: Si ingresamos 30 se debe mostrar en pantalla los números del 1 al
     <title>Document</title>
 </head>
 <body>
+    <?php
     <form action="" method="get">
         <p><label for="usernum">Introduce un número: </label>
         <input type="text" name="usernum" id="usernum"></p>
         <input type="submit" value="Enviar">
     </form>
+    ?>
 <p>
     <?php
     if (isset($_GET['usernum'])) {
