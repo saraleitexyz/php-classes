@@ -14,6 +14,7 @@ mejor nota y la peor nota.
     <form action="" method="get">
         <?php
         for ($i = 1; $i <= 10; $i++) {
+            
             echo "<p><label for='num$i'>Nota $i: </label>";
             echo "<input type='number' name='num$i' id='num$i' required></p>";
         }

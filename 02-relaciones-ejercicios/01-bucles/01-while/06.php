@@ -13,10 +13,10 @@ nos muestre posteriormente la suma de los valores ingresados y su promedio.
     <h1>Ingrese 10 valores: </h1>
     <form action="" method="get">
         <?php
-        for ($i = 1; $i <= 10; $i++) {
-            echo "<p><label for='num$i'>Valor $i: </label>";
-            echo "<input type='number' name='num$i' id='num$i' required></p>";
-        }
+            for ($i = 1; $i <= 10; $i++) {
+                echo "<p><label for='num$i'>Valor $i: </label>";
+                echo "<input type='number' name='num$i' id='num$i' required></p>";
+            }
         ?>
         <input type="submit" value="Calcular">
     </form>
@@ -24,19 +24,19 @@ nos muestre posteriormente la suma de los valores ingresados y su promedio.
     <hr>
 
     <?php
-    if (isset($_GET['num1'])) {
-        $suma = 0;
+        if (isset($_GET['num1'])) {
+            $suma = 0;
 
-        for ($i = 1; $i <= 10; $i++) {
-            $suma += $_GET["num$i"];
+            for ($i = 1; $i <= 10; $i++) {
+                $suma += $_GET["num$i"];
+            }
+
+            $promedio = $suma / 10;
+
+            echo "<h2>Resultados:</h2>";
+            echo "La suma de los valores es: $suma. <br>";
+            echo "El promedio es: $promedio.";
         }
-
-        $promedio = $suma / 10;
-
-        echo "<h2>Resultados:</h2>";
-        echo "La suma de los valores es: $suma. <br>";
-        echo "El promedio es: $promedio.";
-    }
     ?>
 </body>
 </html>

@@ -9,6 +9,7 @@
 <body>
     <?php
     $i = -50;
+    
     while ($i <= 0) {
         echo $i;
         echo "<br>";

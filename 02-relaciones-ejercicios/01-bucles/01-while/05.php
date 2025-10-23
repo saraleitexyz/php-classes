@@ -15,21 +15,19 @@ Ejemplo: Si ingresamos 30 se debe mostrar en pantalla los números del 1 al
 <body>
     <form action="" method="get">
         <p><label for="usernum">Introduce un número: </label>
-        <input type="text" name="usernum" id="usernum"></p>
+        <input type="number" name="usernum" id="usernum"></p>
         <input type="submit" value="Enviar">
     </form>
 <p>
     <?php
-    if (isset($_GET['usernum'])) {
         $i = 1;
-        $usernum = $_GET['usernum']; 
+        $usernum = $_GET['usernum'];
+
         while ($i <= $usernum) {
             echo $i;
             echo "<br>";
             $i++;
         }
-    }
-    
     ?>
 <p>
 </body>

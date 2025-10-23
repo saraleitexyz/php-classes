@@ -21,16 +21,29 @@ número.
         $i = 1;
         $cifras = 1;
         $usernum = $_GET['usernum'];
+
         if ($usernum < 0) {
             $usernum = -$usernum;
         } else {
-            while ($usernum > 10) {
+            while ($usernum >= 10) {
                 $usernum /= 10;
                 $cifras += 1;
             }
         }
         echo "El número tiene $cifras cifras.";
     }
+    
+    /* ALTERNATIVA:
+        $num = 5234;
+        $cont = 0;
+
+        do {
+            $x = intval($num/10);
+            $cont++;
+            $num = $x;
+        } while ($num>0);
+    */
+
     ?>
 <p>
 </body>
