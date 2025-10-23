@@ -25,18 +25,21 @@ mejor nota y la peor nota.
 
     <?php
     if (isset($_GET['num1'])) {
-        $notas_altas = 0;
+        $nota_alta = 0;
+        $nota_baja = 10;
 
         for ($i = 1; $i <= 10; $i++) {
-            if ($_GET["num$i"] >= 7)
-                $notas_altas += 1;
+            $num = $_GET["num$i"];
+            if ($num > $nota_alta) {
+                $nota_alta = $num;
+            } else if ($num < $nota_baja) {
+                $nota_baja = $num;
+            }
         }
 
-        $notas_bajas = 10 - $notas_altas;
-
         echo "<h2>Resultados:</h2>";
-        echo "Hay $notas_altas alumnos con notas mayores o iguales a 7. <br>";
-        echo "Hay $notas_bajas alumnos con notas menores a 7. <br>";
+        echo "La nota más alta es $nota_alta. <br>";
+        echo "La nota más baja es $nota_baja. <br>";
     }
     ?>
 </body>
