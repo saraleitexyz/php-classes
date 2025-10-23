@@ -3,33 +3,40 @@
 nos muestre posteriormente la suma de los valores ingresados y su promedio.
 -->
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
 <body>
-    <?php
+    <h1>Ingrese 10 valores: </h1>
     <form action="" method="get">
-        <p><label for="usernum">Introduce un número: </label>
-        <input type="text" name="usernum" id="usernum"></p>
-        <input type="submit" value="Enviar">
-    </form>
-    ?>
-<p>
-    <?php
-    if (isset($_GET['usernum'])) {
-        $i = 1;
-        $usernum = $_GET['usernum']; 
-        while ($i <= $usernum) {
-            echo $i;
-            echo "<br>";
-            $i++;
+        <?php
+        for ($i = 1; $i <= 10; $i++) {
+            echo "<p><label for='num$i'>Valor $i: </label>";
+            echo "<input type='number' name='num$i' id='num$i' required></p>";
         }
+        ?>
+        <input type="submit" value="Calcular">
+    </form>
+
+    <hr>
+
+    <?php
+    if (isset($_GET['num1'])) {
+        $suma = 0;
+
+        for ($i = 1; $i <= 10; $i++) {
+            $suma += $_GET["num$i"];
+        }
+
+        $promedio = $suma / 10;
+
+        echo "<h2>Resultados:</h2>";
+        echo "La suma de los valores es: $suma. <br>";
+        echo "El promedio es: $promedio.";
     }
-    
     ?>
-<p>
 </body>
 </html>
