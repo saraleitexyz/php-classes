@@ -1,0 +1,16 @@
+<?php
+$hora = 14;
+switch ($hora) {
+    case 9:
+        echo "Es la hora de desayunar.";
+        break;
+    case 14:
+        echo "Es la hora de la comida.";
+        break;
+    case 21:
+        echo "Es la hora de la cena.";
+        break;
+    default:
+        echo "Ahora no toca comer";
+}
+?>
