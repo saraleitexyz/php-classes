@@ -16,9 +16,22 @@ No se utilizar ninguna instrucción condicional. Por ejemplo, al introducir 139 
 Tip: Puedes forzar a realizar la división entera mediante la función intdiv($dividendo, $divisor) 
 o pasar un número flotante a entero puedes usar la función intval()
 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" method="get">
+        <p><label for="user_question">Introduce una cantidad de dinero: </label>
+        <input type="text" name="amount" id="amount"></p>
+        <input type="submit" value="Enviar">
+    </form>
+
 <?php
-    //HACER UN GET
-    $amount = 139;
+    $amount = $_GET['amount'];
 
     $values = [500, 200, 100, 50, 20, 10, 5, 2, 1];
 
@@ -41,3 +54,6 @@ o pasar un número flotante a entero puedes usar la función intval()
     }
     echo "</ul>";
 ?>
+</body>
+</html>
+
