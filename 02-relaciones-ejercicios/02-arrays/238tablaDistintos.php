@@ -7,3 +7,14 @@ Muestra a continuación por pantalla el contenido del array de tal forma que:
 - La fila del mínimo debe aparecer en verde
 - El resto de números deben aparecer en negro.
 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
