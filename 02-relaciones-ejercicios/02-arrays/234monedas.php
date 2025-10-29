@@ -17,6 +17,7 @@ Tip: Puedes forzar a realizar la división entera mediante la función intdiv($d
 o pasar un número flotante a entero puedes usar la función intval()
 -->
 <?php
+    //HACER UN GET
     $amount = 139;
 
     $values = [500, 200, 100, 50, 20, 10, 5, 2, 1];
